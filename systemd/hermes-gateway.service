@@ -1,0 +1,20 @@
+[Unit]
+Description=Hermes Agent Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.hermes
+Environment="HOME=/root"
+Environment="USER=root"
+Environment="PATH=/opt/hermes-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="VIRTUAL_ENV=/opt/hermes-venv"
+Environment="HERMES_HOME=/root/.hermes"
+ExecStart=/opt/hermes-venv/bin/python -m hermes_cli.main gateway run
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

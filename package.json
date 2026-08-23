@@ -1,0 +1,14 @@
+{
+  "name": "hermes-dashboard",
+  "version": "2.0.0",
+  "description": "Hermes Agent Web Dashboard & PIN Gate",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  }
+}

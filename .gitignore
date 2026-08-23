@@ -1,0 +1,13 @@
+node_modules/
+*.log
+.env
+.DS_Store
+*.swp
+*~
+*.tar.gz
+*.db-shm
+*.db-wal
+__pycache__/
+*.pyc
+.venv/
+cache/
